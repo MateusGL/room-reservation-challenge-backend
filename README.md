@@ -23,6 +23,35 @@
 
 ## Description
 
+## Estrutura
+
+```
+src/
+├── auth/
+│   ├── auth.module.ts
+│   ├── auth.service.ts
+│   ├── auth.controller.ts
+│   ├── jwt.strategy.ts
+│   └── dto/
+├── users/
+│   ├── user.entity.ts
+│   ├── users.module.ts
+│   ├── users.service.ts
+│   └── users.controller.ts
+├── reservations/
+│   ├── reservation.entity.ts
+│   ├── reservations.module.ts
+│   ├── reservations.service.ts
+│   ├── reservations.controller.ts
+│   └── dto/
+├── rooms/
+│   ├── room.entity.ts
+│   ├── rooms.module.ts
+│   ├── rooms.service.ts
+│   └── rooms.controller.ts
+└── app.module.ts
+```
+
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Project setup
