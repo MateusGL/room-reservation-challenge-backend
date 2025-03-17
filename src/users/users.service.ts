@@ -11,23 +11,6 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UsersService {
   constructor(private readonly userRepository: UserRepository) {}
 
-  private readonly users = [
-    {
-      id: '1',
-      email: 'john',
-      password: 'changeme',
-    },
-    {
-      id: '2',
-      email: 'maria',
-      password: 'guess',
-    },
-  ];
-
-  // findOne(email: string) {
-  //   return this.users.find((user) => user.email === email);
-  // }
-
   async findOne(id: string): Promise<UserEntity> {
     const user = await this.userRepository.find({ id });
     if (!user) {

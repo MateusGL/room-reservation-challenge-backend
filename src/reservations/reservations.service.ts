@@ -118,7 +118,16 @@ export class ReservationsService {
   }
 
   async findAll(): Promise<ReservationEntity[]> {
-    return await this.reservationRepository.findMany({});
+    const reservations = await this.reservationRepository.findMany({}, [
+      'room',
+      'user',
+    ]);
+    return reservations.map((reservation) => {
+      if (reservation && reservation.user) {
+        delete reservation.user.password;
+      }
+      return reservation;
+    });
   }
 
   async findReservationByEmail(email: string) {

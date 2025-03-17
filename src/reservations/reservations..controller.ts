@@ -15,7 +15,7 @@ import { AuthGuard } from '../auth/auth.guard';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { JwtPayload } from 'src/auth/auth.interface';
 
-@UseGuards(AuthGuard) // Protege todas as rotas
+@UseGuards(AuthGuard)
 @Controller('reservations')
 export class ReservationsController {
   constructor(private readonly reservationsService: ReservationsService) {}

@@ -58,21 +58,19 @@ export class ReservationTypeormRepository extends BaseTypeormRepository<
     const start = new Date(startTime).getTime();
     const end = new Date(endTime).getTime();
 
-    // Busca por reservas no mesmo intervalo de sala
     return await this.ormRepository.find({
       where: {
         room: { id: roomId },
-        startTime: LessThan(new Date(end)), // Reserva inicia antes do fim da nova
-        endTime: MoreThan(new Date(start)), // Reserva termina depois do início da nova
+        startTime: LessThan(new Date(end)),
+        endTime: MoreThan(new Date(start)),
       },
     });
   }
 
   public async findReservationByUserEmail(email: string) {
-    return await this.ormRepository
-      .createQueryBuilder('reservation')
-      .leftJoinAndSelect('reservation.user', 'user')
-      .where('user.email = :email', { email })
-      .getMany();
+    return await this.ormRepository.find({
+      where: { user: { email } },
+      relations: ['room'],
+    });
   }
 }

@@ -4,7 +4,6 @@ import {
   ValidatorConstraintInterface,
 } from 'class-validator';
 
-// Custom validation constraint for duration
 @ValidatorConstraint({ name: 'isDurationValid', async: false })
 export class IsDurationValid implements ValidatorConstraintInterface {
   validate(startTime: string, args: any): boolean {

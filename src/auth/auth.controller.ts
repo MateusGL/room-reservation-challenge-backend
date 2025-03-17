@@ -7,17 +7,10 @@ import { RegisterUserDto } from './dto/register-user.dto';
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  // TODO
-  // @Post('register')
-  // async register(@Body() createUserDto: CreateUserDto) {
-  //   return this.authService.register(createUserDto);
-  // }
-
   @HttpCode(HttpStatus.OK)
   @Post('login')
-  // todo: decidir o nome da função signIn ou login ?
   login(@Body() signInDto: LoginUserDto) {
-    return this.authService.signIn(signInDto.email, signInDto.password);
+    return this.authService.login(signInDto.email, signInDto.password);
   }
 
   @HttpCode(HttpStatus.CREATED)

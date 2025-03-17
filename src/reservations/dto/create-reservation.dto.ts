@@ -14,9 +14,6 @@ export class CreateReservationDto {
   @IsUUID()
   roomId: string;
 
-  // @IsUUID()
-  // userId: string;
-
   @Validate(IsDurationValid)
   checkDuration: string;
 
