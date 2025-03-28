@@ -1,0 +1,636 @@
+_type: export
+__export_format: 4
+__export_date: 2025-03-28T17:03:12.069Z
+__export_source: insomnia.desktop.app:v2022.4.2
+resources:
+  - _id: req_7c7facdbb6854a81afcd44be566097f7
+    parentId: fld_5ad3fd4f7ebd4e44b4abbc7c7eae7789
+    modified: 1743181339918
+    created: 1743181339918
+    url: http://localhost:3001/auth/register
+    name: register
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "john69@email.com",
+        	"name": "john",
+        	"password": "changeme"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ebd31f34646a42dd8c947cdca20395a5
+    authentication: {}
+    metaSortKey: -1731336172257.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5ad3fd4f7ebd4e44b4abbc7c7eae7789
+    parentId: fld_21f6a6f00ad940e6b7cd877da9a8a5b3
+    modified: 1743181339912
+    created: 1743181339912
+    name: auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1741838298073
+    _type: request_group
+  - _id: fld_21f6a6f00ad940e6b7cd877da9a8a5b3
+    parentId: wrk_f3d3e6b4ba4c4ec5a43c1d614479a0ba
+    modified: 1743181339883
+    created: 1743181339883
+    name: ReservationProject
+    description: ""
+    environment: {}
+    environmentPropertyOrder: {}
+    metaSortKey: -1000000000
+    _type: request_group
+  - _id: wrk_f3d3e6b4ba4c4ec5a43c1d614479a0ba
+    parentId: null
+    modified: 1743181325822
+    created: 1743181325822
+    name: ReservationChallenge
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_c756ea4567364c50a37353db698164bb
+    parentId: fld_5ad3fd4f7ebd4e44b4abbc7c7eae7789
+    modified: 1743181339914
+    created: 1743181339914
+    url: http://localhost:3001/auth/login
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "mateulacerda5@hotmail.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ebd31f34646a42dd8c947cdca20395a5
+    authentication: {}
+    metaSortKey: -1731336172207.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b47923499b4d4c6a8fc313cd76528d89
+    parentId: fld_88663527cd454de99b69ed5a9225f728
+    modified: 1743181339890
+    created: 1743181339890
+    url: http://localhost:3001/users/
+    name: findAll
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "john",
+        	"password": "changeme"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ebd31f34646a42dd8c947cdca20395a5
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+      prefix: " Bearer"
+    metaSortKey: -1741838293363
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_88663527cd454de99b69ed5a9225f728
+    parentId: fld_21f6a6f00ad940e6b7cd877da9a8a5b3
+    modified: 1743181339887
+    created: 1743181339887
+    name: users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1741838293413
+    _type: request_group
+  - _id: req_905513f930604eb19da4558a0a93f890
+    parentId: fld_88663527cd454de99b69ed5a9225f728
+    modified: 1743181339898
+    created: 1743181339898
+    url: http://localhost:3001/users/8a154e4e-4b96-4b2f-8f4f-3dd81e7fdde2
+    name: findOne
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjA5NzA2NCwiZXhwIjoxNzQyMTAwNjY0fQ.xoH-m8WAT8XUF3w8X_L16l42ACdUZFzLQhrkWUf_9rM
+      prefix: " Bearer"
+    metaSortKey: -1736587232810.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_50408dc61d0741daa05efffbd68830cc
+    parentId: fld_88663527cd454de99b69ed5a9225f728
+    modified: 1743181339902
+    created: 1743181339902
+    url: http://localhost:3001/users/8a154e4e-4b96-4b2f-8f4f-3dd81e7fdde2
+    name: update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "john-Update"
+        }
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6874bd00cdd34a8ca0e92052d3766be1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOGYzNmExOS00YWU4LTQxMTEtODUxNS04NDczYjYxYzNjNmIiLCJlbWFpbCI6ImpvaG42QGVtYWlsLmNvbSIsImlhdCI6MTc0MTgzODI1MCwiZXhwIjoxNzQxODQxODUwfQ.pcRPQarrRF6Mtg7_ZtyJ3KigtQEDRJr32LX-4YLrCn0
+      prefix: " Bearer"
+    metaSortKey: -1733961702533.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a8f37cc25af54d6196c1d0f7c96f23a3
+    parentId: fld_88663527cd454de99b69ed5a9225f728
+    modified: 1743181339907
+    created: 1743181339907
+    url: http://localhost:3001/users/b8f36a19-4ae8-4111-8515-8473b61c3c6b
+    name: delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOGYzNmExOS00YWU4LTQxMTEtODUxNS04NDczYjYxYzNjNmIiLCJlbWFpbCI6ImpvaG42QGVtYWlsLmNvbSIsImlhdCI6MTc0MTgzODI1MCwiZXhwIjoxNzQxODQxODUwfQ.pcRPQarrRF6Mtg7_ZtyJ3KigtQEDRJr32LX-4YLrCn0
+      prefix: " Bearer"
+    metaSortKey: -1732648937395.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f30cd5a681b74e15a7e0a88de9308513
+    parentId: fld_bd145c7ea02c46f38f9808f3df826b9e
+    modified: 1743181339942
+    created: 1743181339942
+    url: http://localhost:3001/rooms/
+    name: create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Sala de Reunião A3",
+          "capacity": 10
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a76ab7fb7b0a427c861231595ce343c3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+    metaSortKey: -1742006876546
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_bd145c7ea02c46f38f9808f3df826b9e
+    parentId: fld_21f6a6f00ad940e6b7cd877da9a8a5b3
+    modified: 1743181339923
+    created: 1743181339923
+    name: rooms
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1741795666692.5
+    _type: request_group
+  - _id: req_438cd707586f4ac797bc0d77d50bde51
+    parentId: fld_bd145c7ea02c46f38f9808f3df826b9e
+    modified: 1743181339926
+    created: 1743181339926
+    url: http://localhost:3001/rooms/
+    name: findAll
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNTA5NjUzZC05ZjFmLTRiMGQtYjI1Yy03M2UxMmI1M2ZiM2QiLCJlbWFpbCI6Im1hdGV1bGFjZXJkYTVAaG90bWFpbC5jb20iLCJpYXQiOjE3NDMxMjYyNjMsImV4cCI6MTc0MzEyOTg2M30.lOEe5cyAxgrgi4ZUp06kJKJ5cD-c_DqD_L_YEBXtqxk
+      prefix: " Bearer"
+    metaSortKey: -1741838293363
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_77ad4b3e6bb2415b92cd1b908e3fdcda
+    parentId: fld_bd145c7ea02c46f38f9808f3df826b9e
+    modified: 1743181339932
+    created: 1743181339932
+    url: http://localhost:3001/rooms/536b7fe4-35ef-41ad-a05d-a14b0a797a4a
+    name: findOne
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNTA5NjUzZC05ZjFmLTRiMGQtYjI1Yy03M2UxMmI1M2ZiM2QiLCJlbWFpbCI6Im1hdGV1bGFjZXJkYTVAaG90bWFpbC5jb20iLCJpYXQiOjE3NDIxNjk3MDAsImV4cCI6MTc0MjE3MzMwMH0.xlV9yHns1DPhb5dGnH2gefuZdKnwwv41cLl96X-G1ok
+      prefix: " Bearer"
+    metaSortKey: -1736587232810.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_116152370c3c45e6826e3e8d9fcc6dcb
+    parentId: fld_bd145c7ea02c46f38f9808f3df826b9e
+    modified: 1743181339936
+    created: 1743181339936
+    url: http://localhost:3001/rooms/4c55929d-8cbf-4e86-991b-da695a6a305d
+    name: update - parcial
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Sala VIP",
+          "capacity": 15
+        }
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6874bd00cdd34a8ca0e92052d3766be1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+      prefix: " Bearer"
+    metaSortKey: -1733961702533.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3f40582741e241008e9c2465f07b7d96
+    parentId: fld_bd145c7ea02c46f38f9808f3df826b9e
+    modified: 1743181339939
+    created: 1743181339939
+    url: http://localhost:3001/rooms/4c55929d-8cbf-4e86-991b-da695a6a305d
+    name: delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+      prefix: " Bearer"
+    metaSortKey: -1732648937395.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6f1842fd3c934809978fdba4e0c36e2c
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181339961
+    created: 1743181339961
+    url: http://localhost:3001/reservations/
+    name: create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "startTime": "2025-04-20T09:00:00.000Z",
+          "endTime": "2025-04-20T10:01:00.000Z",
+          "roomId": "536b7fe4-35ef-41ad-a05d-a14b0a797a4a",
+          "userId": "5b43cab6-cd93-414c-adf4-49747b7c4fef"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a76ab7fb7b0a427c861231595ce343c3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNTA5NjUzZC05ZjFmLTRiMGQtYjI1Yy03M2UxMmI1M2ZiM2QiLCJlbWFpbCI6Im1hdGV1bGFjZXJkYTVAaG90bWFpbC5jb20iLCJpYXQiOjE3NDIxNTUzMDAsImV4cCI6MTc0MjE1ODkwMH0.eUa800uju5uxIcNC6lE-zaKyPMftLUOIqKnsxGQbTFc
+    metaSortKey: -1742006876546
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_529f2369c5ef46019f7a502b56d632c3
+    parentId: fld_21f6a6f00ad940e6b7cd877da9a8a5b3
+    modified: 1743181339946
+    created: 1743181339946
+    name: reservations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1741774353332.25
+    _type: request_group
+  - _id: req_9cb3fc3ab40e458ea985f43b7c16dab3
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181352963
+    created: 1743181339966
+    url: http://localhost:3001/reservations/
+    name: create - passado - erro esperado
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "startTime": "2024-03-10T08:00:00.000Z",
+          "endTime": "2024-03-10T09:00:00.000Z",
+          "roomId": "536b7fe4-35ef-41ad-a05d-a14b0a797a4a",
+          "userId": "5b43cab6-cd93-414c-adf4-49747b7c4fef"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a76ab7fb7b0a427c861231595ce343c3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+    metaSortKey: -1741922584954.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_88ac72151a6f4ad6931e18b25b8bb811
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181339949
+    created: 1743181339949
+    url: http://localhost:3001/reservations/
+    name: findAll
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNTA5NjUzZC05ZjFmLTRiMGQtYjI1Yy03M2UxMmI1M2ZiM2QiLCJlbWFpbCI6Im1hdGV1bGFjZXJkYTVAaG90bWFpbC5jb20iLCJpYXQiOjE3NDMxMjYyNjMsImV4cCI6MTc0MzEyOTg2M30.lOEe5cyAxgrgi4ZUp06kJKJ5cD-c_DqD_L_YEBXtqxk
+      prefix: " Bearer"
+    metaSortKey: -1741838293363
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d9f8c21edac04f5abd9057bd1767838b
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181339968
+    created: 1743181339968
+    url: http://localhost:3001/reservations/my-reservations
+    name: my-reservations
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNTA5NjUzZC05ZjFmLTRiMGQtYjI1Yy03M2UxMmI1M2ZiM2QiLCJlbWFpbCI6Im1hdGV1bGFjZXJkYTVAaG90bWFpbC5jb20iLCJpYXQiOjE3NDMxMjYyNjMsImV4cCI6MTc0MzEyOTg2M30.lOEe5cyAxgrgi4ZUp06kJKJ5cD-c_DqD_L_YEBXtqxk
+      prefix: " Bearer"
+    metaSortKey: -1739212763086.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_56b3a929e3a74feb87962bd70de66c16
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181339951
+    created: 1743181339951
+    url: http://localhost:3001/reservations/0e3502da-cd40-463a-9b15-031c1dee1d5b
+    name: findOne
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+      prefix: " Bearer"
+    metaSortKey: -1736587232810.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e60fb8395c514f7b9c9a7fd09ea1e5c9
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181339954
+    created: 1743181339954
+    url: http://localhost:3001/reservations/977a3b78-d5ce-428f-b2cf-cf780ec8e892
+    name: update - parcial
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        	{		
+        		"startTime": "2026-03-10T08:00:00.000Z",
+        		"endTime": "2026-03-10T09:00:00.000Z"
+        	}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6874bd00cdd34a8ca0e92052d3766be1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+      prefix: " Bearer"
+    metaSortKey: -1733961702533.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_58d3e79ea88440c5aad191d2ce91f475
+    parentId: fld_529f2369c5ef46019f7a502b56d632c3
+    modified: 1743181339957
+    created: 1743181339957
+    url: http://localhost:3001/rooms/4c55929d-8cbf-4e86-991b-da695a6a305d
+    name: delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_f05ada483f164319b83dd4b6aa4affe7
+        name: ""
+        value: ""
+        description: ""
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYjQ0NWVmOC02M2ZiLTQ3YzktYjI0Ni1iNmY1NDQ4ZDFlNDYiLCJlbWFpbCI6ImpvaG41QGVtYWlsLmNvbSIsImlhdCI6MTc0MjAwNjc2OSwiZXhwIjoxNzQyMDEwMzY5fQ.l6WdagsQh3JmkWBS4giUhVfMl-7Nfbdgea3RwzOn8m4
+      prefix: " Bearer"
+    metaSortKey: -1732648937395.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_64e83b9d6e1d0557a2fa2ec4a6a172db18a5f8c5
+    parentId: wrk_f3d3e6b4ba4c4ec5a43c1d614479a0ba
+    modified: 1743181325844
+    created: 1743181325844
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1743181325844
+    _type: environment
+  - _id: jar_64e83b9d6e1d0557a2fa2ec4a6a172db18a5f8c5
+    parentId: wrk_f3d3e6b4ba4c4ec5a43c1d614479a0ba
+    modified: 1743181325849
+    created: 1743181325849
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_c3cf22699a2744f8a45f4c0b1c373292
+    parentId: wrk_f3d3e6b4ba4c4ec5a43c1d614479a0ba
+    modified: 1743181325827
+    created: 1743181325827
+    fileName: ReservationChallenge
+    contents: ""
+    contentType: yaml
+    _type: api_spec
