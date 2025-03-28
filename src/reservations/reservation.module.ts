@@ -6,7 +6,7 @@ import {
   ReservationTypeormRepository,
 } from './reservation.repository';
 import { ReservationsService } from './reservations.service';
-import { ReservationsController } from './reservations..controller';
+import { ReservationsController } from './reservations.controller';
 import { UsersModule } from '../users/users.module';
 import { AuthModule } from '../auth/auth.module';
 import { RoomsModule } from '../rooms/rooms.module';
