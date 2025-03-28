@@ -34,10 +34,9 @@ export class ReservationsService {
       throw new BadRequestException('End time must be after start time.');
     }
 
-    // Verifica duração mínima de 1 hora
     const durationMs =
       new Date(endTime).getTime() - new Date(startTime).getTime();
-    const ONE_HOUR = 60 * 60 * 1000; // 1h em milissegundos
+    const ONE_HOUR = 60 * 60 * 1000;
 
     if (durationMs < ONE_HOUR) {
       throw new BadRequestException(
@@ -80,7 +79,6 @@ export class ReservationsService {
       createReservationDto.endTime,
     );
 
-    // Obtém as entidades de usuário e sala
     const room = await this.roomRepository.find({
       id: createReservationDto.roomId,
     });
@@ -95,8 +93,8 @@ export class ReservationsService {
     const reservation: CreateReservation = {
       startTime: createReservationDto.startTime,
       endTime: createReservationDto.endTime,
-      room: room, // Mapeando roomId para a entidade Room
-      user: user, // Mapeando userId para a entidade User
+      room: room,
+      user: user,
     };
 
     const newReservation = await this.reservationRepository.create(reservation);

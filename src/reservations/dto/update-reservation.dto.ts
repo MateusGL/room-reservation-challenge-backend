@@ -6,6 +6,6 @@ export class UpdateReservationDto {
   startTime: Date;
 
   @IsDateString()
-  @Validate(IsEndTimeAfterStartTime, ['startTime']) // Valida que endTime > startTime
+  @Validate(IsEndTimeAfterStartTime, ['startTime'])
   endTime: Date;
 }

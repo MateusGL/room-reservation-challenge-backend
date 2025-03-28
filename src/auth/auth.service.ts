@@ -34,8 +34,6 @@ export class AuthService {
     const payload: JwtPayload = {
       sub: user.id,
       email: user.email,
-      // iat: Date.now(),
-      // exp: Math.floor(Date.now() / 1000) + 3600, // 1 hora
     };
     return this.jwtService.sign(payload, { expiresIn: '1h' });
   }

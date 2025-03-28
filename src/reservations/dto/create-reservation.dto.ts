@@ -8,7 +8,7 @@ export class CreateReservationDto {
   startTime: Date;
 
   @IsDateString()
-  @Validate(IsEndTimeAfterStartTime, ['startTime']) // Valida que endTime > startTime
+  @Validate(IsEndTimeAfterStartTime, ['startTime'])
   endTime: Date;
 
   @IsUUID()

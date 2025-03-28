@@ -8,7 +8,7 @@ export const GetUser = createParamDecorator(
     const user = request.user as UserEntity;
 
     if (!user) {
-      throw new Error('Usuário não autenticado');
+      throw new Error('Unauthenticated user');
     }
 
     return data ? user?.[data] : user;
