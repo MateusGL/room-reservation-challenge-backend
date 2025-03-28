@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { BaseRepository } from '../@common/domain/base.repository';
-import { BaseTypeormRepository } from 'src/@common/domain/base.typeorm.repository';
+import { BaseTypeormRepository } from '../@common/domain/base.typeorm.repository';
 import { DataSource, LessThan, MoreThan } from 'typeorm';
 import { ReservationEntity } from './reservation.entity';
 import {

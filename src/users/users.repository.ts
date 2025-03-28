@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { BaseRepository } from '../@common/domain/base.repository';
 import { UserEntity } from './user.entity';
 import { CreateUser, FindUser } from './users.interface';
-import { BaseTypeormRepository } from 'src/@common/domain/base.typeorm.repository';
+import { BaseTypeormRepository } from '../@common/domain/base.typeorm.repository';
 import { UserTypeormEntity } from './users-typeorm.entity';
 import { DataSource } from 'typeorm';
 

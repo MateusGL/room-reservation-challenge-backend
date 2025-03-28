@@ -17,4 +17,9 @@ export class UserTypeormEntity {
 
   @OneToMany(() => ReservationTypeormEntity, (reservation) => reservation.user)
   reservations: ReservationTypeormEntity[];
+
+  toJSON() {
+    const { password, ...userWithoutPassword } = this;
+    return userWithoutPassword;
+  }
 }

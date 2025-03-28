@@ -5,7 +5,7 @@ export class UserEntity {
 
   email: string;
 
-  password?: string;
+  password: string;
 
   name: string;
 

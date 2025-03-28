@@ -12,8 +12,8 @@ import { ReservationsService } from './reservations.service';
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
 import { AuthGuard } from '../auth/auth.guard';
-import { GetUser } from 'src/auth/get-user.decorator';
-import { JwtPayload } from 'src/auth/auth.interface';
+import { GetUser } from '../auth/get-user.decorator';
+import { JwtPayload } from '../auth/auth.interface';
 
 @UseGuards(AuthGuard)
 @Controller('reservations')

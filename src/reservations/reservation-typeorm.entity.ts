@@ -1,6 +1,6 @@
 import { Entity, Column, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { UserTypeormEntity } from '../users/users-typeorm.entity';
-import { RoomTypeormEntity } from 'src/rooms/room-typeorm.entity';
+import { RoomTypeormEntity } from '../rooms/room-typeorm.entity';
 
 @Entity('reservations')
 export class ReservationTypeormEntity {

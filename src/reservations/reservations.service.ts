@@ -6,8 +6,8 @@ import {
 import { ReservationRepository } from './reservation.repository';
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { ReservationEntity } from './reservation.entity';
-import { RoomRepository } from 'src/rooms/rooms.repository';
-import { UserRepository } from 'src/users/users.repository';
+import { RoomRepository } from '../rooms/rooms.repository';
+import { UserRepository } from '../users/users.repository';
 import {
   CreateReservation,
   RelationsReservation,
@@ -122,12 +122,7 @@ export class ReservationsService {
       'room',
       'user',
     ]);
-    return reservations.map((reservation) => {
-      if (reservation && reservation.user) {
-        delete reservation.user.password;
-      }
-      return reservation;
-    });
+    return reservations;
   }
 
   async findReservationByEmail(email: string) {
